@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cecaidsgbl6q4"]
+
+[ext_resource type="Texture2D" uid="uid://by6v11kurdsnx" path="res://Resources/afk_bomb.png" id="1_hsi1r"]
+[ext_resource type="Script" path="res://Objects/Powerups/AFK_Bomb/AFK_Bomb.gd" id="1_iplc4"]
+
+[node name="AfkBomb" type="Node2D"]
+script = ExtResource("1_iplc4")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_hsi1r")

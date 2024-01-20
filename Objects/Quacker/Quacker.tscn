@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqeiiflgin118"]
+
+[ext_resource type="Script" path="res://Objects/Quacker/Quacker.gd" id="1_kqr6k"]
+[ext_resource type="Texture2D" uid="uid://cbra0n4n7voc4" path="res://Resources/quacker.png" id="2_m8or3"]
+[ext_resource type="AudioStream" uid="uid://d1h7vyd84d3bp" path="res://Resources/Audio/screech.mp3" id="3_417th"]
+[ext_resource type="AudioStream" uid="uid://dk3gjkwr7ksba" path="res://Resources/Audio/quack.mp3" id="3_n5jee"]
+[ext_resource type="AudioStream" uid="uid://wbfcww2pqkyc" path="res://Resources/Audio/step.mp3" id="4_5tajr"]
+[ext_resource type="AudioStream" uid="uid://pkle6k7vaqab" path="res://Resources/Audio/yay.mp3" id="6_iw6qt"]
+
+[sub_resource type="Animation" id="Animation_m7voe"]
+resource_name = "win"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.7, 1),
+"transitions": PackedFloat32Array(1, 2.14355),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 1),
+"transitions": PackedFloat32Array(1, 1, 4.14106),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 0.8), Vector2(0, 3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7i7td"]
+_data = {
+"win": SubResource("Animation_m7voe")
+}
+
+[node name="Quacker" type="Node2D"]
+z_index = 10
+script = ExtResource("1_kqr6k")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_m8or3")
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7i7td")
+}
+
+[node name="quacker" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_n5jee")
+
+[node name="stepper" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5tajr")
+volume_db = -0.5
+
+[node name="screecher" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_417th")
+volume_db = 20.0
+pitch_scale = 1.5
+panning_strength = 1.8
+
+[node name="yayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_iw6qt")
+volume_db = 5.0

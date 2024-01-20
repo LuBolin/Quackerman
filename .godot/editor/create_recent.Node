@@ -1,0 +1,14 @@
+AudioStreamPlayer2D
+AnimationPlayer
+AnimationTree
+Label
+Button
+TextureRect
+Sprite2D
+Camera2D
+Timer
+Node2D
+TileMap
+Line2D
+MeshInstance2D
+CollisionPolygon2D

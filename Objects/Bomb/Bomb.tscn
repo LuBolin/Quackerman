@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqndcvj8jofk7"]
+
+[ext_resource type="Script" path="res://Objects/Bomb/Bomb.gd" id="1_bnpa7"]
+[ext_resource type="Texture2D" uid="uid://xbyibcqwdqla" path="res://Resources/bomb.png" id="1_x6qcn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpukn"]
+atlas = ExtResource("1_x6qcn")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2qws"]
+atlas = ExtResource("1_x6qcn")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j8h48"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpukn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2qws")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Bomb" type="Node2D"]
+script = ExtResource("1_bnpa7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_j8h48")
+autoplay = "default"
+
+[node name="Fuse_Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -8.0
+offset_right = 16.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1

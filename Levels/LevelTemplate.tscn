@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1f2hwr3lcd6s"]
+
+[ext_resource type="TileSet" uid="uid://c8sg0qx2pfbl2" path="res://Scenes/WallTileSet.tres" id="1_ec2xr"]
+[ext_resource type="Script" path="res://Levels/Level.gd" id="1_ys5f5"]
+[ext_resource type="PackedScene" uid="uid://d425uo65vp3h" path="res://Objects/HUD.tscn" id="3_ikmsi"]
+
+[node name="LevelRoot" type="Node2D"]
+script = ExtResource("1_ys5f5")
+turn_limit = null
+bomb_count = null
+bomb_strength = null
+
+[node name="Terrain" type="TileMap" parent="."]
+tile_set = ExtResource("1_ec2xr")
+format = 2
+layer_0/tile_data = PackedInt32Array(327674, 0, 0, 327675, 0, 0, 327676, 0, 0, 327677, 0, 0, 327678, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 196613, 0, 0, 131077, 0, 0, 65541, 0, 0, 5, 0, 0, -65531, 0, 0, -131067, 0, 0, -196603, 0, 0, -262139, 0, 0, -327675, 0, 0, -327676, 0, 0, -327677, 0, 0, -327678, 0, 0, -327679, 0, 0, -327680, 0, 0, -262145, 0, 0, -262146, 0, 0, -262147, 0, 0, -262148, 0, 0, -262149, 0, 0, -262150, 0, 0, -196614, 0, 0, -131078, 0, 0, -65542, 0, 0, -6, 0, 0, 65530, 0, 0, 131066, 0, 0, 196602, 0, 0, 262138, 0, 0)
+
+[node name="InputDelayTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="HUD" parent="." instance=ExtResource("3_ikmsi")]
+visible = false
+
+[node name="Camera2D" type="Camera2D" parent="."]

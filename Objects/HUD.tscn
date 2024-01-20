@@ -1,0 +1,161 @@
+[gd_scene load_steps=8 format=3 uid="uid://d425uo65vp3h"]
+
+[ext_resource type="Texture2D" uid="uid://cbra0n4n7voc4" path="res://Resources/quacker.png" id="1_3ftgk"]
+[ext_resource type="Script" path="res://Objects/HUD.gd" id="1_elrx7"]
+[ext_resource type="FontFile" uid="uid://1m15bmhxnv8c" path="res://Resources/Xolonium-Regular.ttf" id="2_m0lhj"]
+[ext_resource type="Texture2D" uid="uid://cgqyqdm1x5t2b" path="res://Resources/bomb_singular.png" id="4_1dfdp"]
+[ext_resource type="Texture2D" uid="uid://drwuv4kt752h4" path="res://Resources/gunpowder.png" id="5_yjsl0"]
+[ext_resource type="Texture2D" uid="uid://0mfslx87cshm" path="res://Resources/clock.png" id="6_h5o6r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kcj1f"]
+font_size = 48
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_elrx7")
+
+[node name="TurnOverlay" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.027451, 0.0588235, 0.0588235, 0.607843)
+
+[node name="Label" type="Label" parent="TurnOverlay"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Stats" type="VBoxContainer" parent="."]
+offset_right = 409.0
+offset_bottom = 136.0
+
+[node name="Quacker" type="HBoxContainer" parent="Stats"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="Stats/Quacker"]
+layout_mode = 2
+texture = ExtResource("1_3ftgk")
+
+[node name="Name" type="Label" parent="Stats/Quacker"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m0lhj")
+theme_override_font_sizes/font_size = 48
+text = "Quackerman"
+label_settings = SubResource("LabelSettings_kcj1f")
+
+[node name="Bombs" type="HBoxContainer" parent="Stats"]
+layout_mode = 2
+
+[node name="Bomb" type="TextureRect" parent="Stats/Bombs"]
+layout_mode = 2
+texture = ExtResource("4_1dfdp")
+
+[node name="Label" type="Label" parent="Stats/Bombs"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m0lhj")
+theme_override_font_sizes/font_size = 48
+text = "999"
+vertical_alignment = 2
+
+[node name="BombStrength" type="HBoxContainer" parent="Stats"]
+layout_mode = 2
+
+[node name="Bomb" type="TextureRect" parent="Stats/BombStrength"]
+layout_mode = 2
+texture = ExtResource("5_yjsl0")
+
+[node name="Label" type="Label" parent="Stats/BombStrength"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m0lhj")
+theme_override_font_sizes/font_size = 48
+text = "1
+"
+vertical_alignment = 2
+
+[node name="Clock" type="HBoxContainer" parent="Stats"]
+layout_mode = 2
+
+[node name="ClockTexture" type="TextureRect" parent="Stats/Clock"]
+layout_mode = 2
+texture = ExtResource("6_h5o6r")
+
+[node name="Label" type="Label" parent="Stats/Clock"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m0lhj")
+theme_override_font_sizes/font_size = 48
+text = "9
+"
+
+[node name="PowerupInfo" type="Label" parent="Stats"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m0lhj")
+theme_override_font_sizes/font_size = 24
+text = "Gunpowder 
+increases
+your range."
+autowrap_mode = 3
+
+[node name="Info" type="VBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -187.0
+offset_top = -2.0
+offset_bottom = 2212.0
+grow_horizontal = 0
+
+[node name="Instructions" type="Label" parent="Info"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m0lhj")
+theme_override_font_sizes/font_size = 32
+text = "Get to safety in time.
+Don't die."
+autowrap_mode = 3
+
+[node name="Controls" type="RichTextLabel" parent="Info"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_m0lhj")
+theme_override_font_sizes/normal_font_size = 20
+text = "
+Instructions:
+
+WASD to move.
+SHIFT  to plant a bomb.
+R to restart.
+
+Explosions are cross shaped.
+Explosions go through walls.
+Floor items explode with 2 range (hitting 9 tiles)."
+fit_content = true
+
+[node name="ToMainMenu" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_right = 8.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_m0lhj")
+theme_override_font_sizes/font_size = 32
+text = "Main Menu"
+
+[node name="LevelLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("2_m0lhj")
+theme_override_font_sizes/font_size = 48
+text = "Level 1"
+
+[connection signal="pressed" from="ToMainMenu" to="." method="_on_to_main_menu_pressed"]

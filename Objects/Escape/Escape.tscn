@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp7dwedpthajb"]
+
+[ext_resource type="Texture2D" uid="uid://b1eo8mulphcuy" path="res://Resources/escape.png" id="1_4e2of"]
+[ext_resource type="Script" path="res://Objects/Escape/Escape.gd" id="1_sx6dk"]
+
+[node name="Escape" type="Node2D"]
+script = ExtResource("1_sx6dk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4e2of")

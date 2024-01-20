@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://d425uo65vp3h"]
+
+[ext_resource type="Texture2D" uid="uid://cbra0n4n7voc4" path="res://Resources/quacker.png" id="1_3ftgk"]
+[ext_resource type="FontFile" uid="uid://1m15bmhxnv8c" path="res://Resources/Xolonium-Regular.ttf" id="2_m0lhj"]
+[ext_resource type="Texture2D" uid="uid://bljad16xlhfwv" path="res://Resources/empty_feet.png" id="4_bmvwj"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Quacker" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 41.0
+offset_bottom = 40.0
+
+[node name="Icon" type="TextureRect" parent="Quacker"]
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("1_3ftgk")
+
+[node name="Name" type="TextEdit" parent="Quacker"]
+layout_mode = 2
+offset_left = 69.0
+offset_right = 422.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_m0lhj")
+theme_override_font_sizes/font_size = 48
+text = "Quackerman"
+
+[node name="Movement" type="Control" parent="Quacker"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Quacker/Movement"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 70.0
+offset_right = 112.0
+offset_bottom = 110.0
+texture = ExtResource("4_bmvwj")
+expand_mode = 1
