@@ -90,13 +90,13 @@ theme_override_font_sizes/font_size = 48
 text = "9
 "
 
-[node name="PowerupInfo" type="Label" parent="Stats"]
+[node name="Controls" type="Label" parent="Stats"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_m0lhj")
 theme_override_font_sizes/font_size = 24
-text = "Gunpowder 
-increases
-your range."
+text = "WASD: Move
+SHIFT: Bomb
+R: Restart"
 autowrap_mode = 3
 
 [node name="Info" type="VBoxContainer" parent="."]
@@ -116,20 +116,19 @@ text = "Get to safety in time.
 Don't die."
 autowrap_mode = 3
 
-[node name="Controls" type="RichTextLabel" parent="Info"]
+[node name="Tips" type="RichTextLabel" parent="Info"]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("2_m0lhj")
 theme_override_font_sizes/normal_font_size = 20
 text = "
-Instructions:
+Tips:
+1. Gunpowder 
+increases
+your range.
 
-WASD to move.
-SHIFT  to plant a bomb.
-R to restart.
+2. Explosions go through walls.
 
-Explosions are cross shaped.
-Explosions go through walls.
-Floor items explode with 2 range (hitting 9 tiles)."
+3. Things explode."
 fit_content = true
 
 [node name="ToMainMenu" type="Button" parent="."]

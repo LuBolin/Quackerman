@@ -1,9 +1,9 @@
+TextureRect
 AudioStreamPlayer2D
 AnimationPlayer
 AnimationTree
 Label
 Button
-TextureRect
 Sprite2D
 Camera2D
 Timer

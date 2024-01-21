@@ -13,10 +13,12 @@ config_version=5
 config/name="BombMeOut"
 run/main_scene="res://Scenes/MainScreen.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+config/icon="res://Resources/quacker.png"
 
 [autoload]
 
 Singleton="*res://Singleton.gd"
+Bgm="*res://BGM.tscn"
 
 [input]
 
