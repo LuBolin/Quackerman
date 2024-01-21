@@ -1,10 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705797308
-BGM.tscn::PackedScene::8338385656699007564::1705797308::0::1::::<><>::uid://2x6ql8mjgiiq::::res://Resources/Audio/bgm.mp3
-export_presets.cfg::TextFile::-1::1705788282::0::1::::<><>::
+::res://::1705803191
+BGM.tscn::PackedScene::8338385656699007564::1705803191::0::1::::<><>::uid://2x6ql8mjgiiq::::res://Resources/Audio/bgm.mp3
+export_presets.cfg::TextFile::-1::1705798693::0::1::::<><>::
 gitignore.txt::TextFile::-1::1705788154::0::1::::<><>::
+README.md::TextFile::-1::1705798812::0::1::::<><>::
 Singleton.gd::GDScript::-1::1705784681::0::1::::<>Node<>::
-::res://Levels/::1705789236
+::res://Levels/::1705803191
 DummyLevel.tscn::PackedScene::1791517237954394202::1705777881::0::1::::<><>::res://Levels/Level.gd<>uid://c8sg0qx2pfbl2::::res://Scenes/WallTileSet.tres<>uid://d425uo65vp3h::::res://Objects/HUD.tscn
 Level1.tscn::PackedScene::5111615037751924890::1705789236::0::1::::<><>::uid://c1f2hwr3lcd6s::::res://Levels/LevelTemplate.tscn
 Level2.tscn::PackedScene::7390035100474959213::1705789236::0::1::::<><>::uid://c1f2hwr3lcd6s::::res://Levels/LevelTemplate.tscn
@@ -12,11 +13,11 @@ Level3.tscn::PackedScene::3536448978744302842::1705782199::0::1::::<><>::uid://c
 Level4.tscn::PackedScene::131233407437167762::1705789236::0::1::::<><>::uid://c1f2hwr3lcd6s::::res://Levels/LevelTemplate.tscn
 Level5.tscn::PackedScene::8260990184904909835::1705789236::0::1::::<><>::uid://c1f2hwr3lcd6s::::res://Levels/LevelTemplate.tscn
 Level6.tscn::PackedScene::1956761741231843019::1705789236::0::1::::<><>::uid://c1f2hwr3lcd6s::::res://Levels/LevelTemplate.tscn
-Level.gd::GDScript::-1::1705788363::0::1::::<>Node2D<>::
+Level.gd::GDScript::-1::1705803191::0::1::::<>Node2D<>::
 LevelTemplate.tscn::PackedScene::6609726233169724732::1705789236::0::1::::<><>::uid://c8sg0qx2pfbl2::::res://Scenes/WallTileSet.tres<>res://Levels/Level.gd<>uid://d425uo65vp3h::::res://Objects/HUD.tscn
-::res://Objects/::1705789236
+::res://Objects/::1705803936
 HUD.gd::GDScript::-1::1705785053::0::1::::HUD<>CanvasLayer<>::
-HUD.tscn::PackedScene::272127491947368675::1705789236::0::1::::<><>::uid://cbra0n4n7voc4::::res://Resources/quacker.png<>res://Objects/HUD.gd<>uid://1m15bmhxnv8c::::res://Resources/Xolonium-Regular.ttf<>uid://cgqyqdm1x5t2b::::res://Resources/bomb_singular.png<>uid://drwuv4kt752h4::::res://Resources/gunpowder.png<>uid://0mfslx87cshm::::res://Resources/clock.png
+HUD.tscn::PackedScene::272127491947368675::1705803936::0::1::::<><>::uid://cbra0n4n7voc4::::res://Resources/quacker.png<>res://Objects/HUD.gd<>uid://1m15bmhxnv8c::::res://Resources/Xolonium-Regular.ttf<>uid://cgqyqdm1x5t2b::::res://Resources/bomb_singular.png<>uid://drwuv4kt752h4::::res://Resources/gunpowder.png<>uid://0mfslx87cshm::::res://Resources/clock.png<>uid://dgk5pchgitamr::::res://Resources/guide2.png
 ::res://Objects/Bomb/::1705773983
 Bomb.gd::GDScript::-1::1705773982::0::1::::Bomb<>Node2D<>::
 Bomb.tscn::PackedScene::5922886617369151720::1705761971::0::1::::<><>::res://Objects/Bomb/Bomb.gd<>uid://xbyibcqwdqla::::res://Resources/bomb.png
@@ -39,7 +40,7 @@ Gunpowder.tscn::PackedScene::2057442672583274411::1705774707::0::1::::<><>::res:
 ::res://Objects/Quacker/::1705776479
 Quacker.gd::GDScript::-1::1705776479::0::1::::Quacker<>Node2D<>::
 Quacker.tscn::PackedScene::5904620678797774693::1705774738::0::1::::<><>::res://Objects/Quacker/Quacker.gd<>uid://cbra0n4n7voc4::::res://Resources/quacker.png<>uid://d1h7vyd84d3bp::::res://Resources/Audio/screech.mp3<>uid://dk3gjkwr7ksba::::res://Resources/Audio/quack.mp3<>uid://wbfcww2pqkyc::::res://Resources/Audio/step.mp3<>uid://pkle6k7vaqab::::res://Resources/Audio/yay.mp3
-::res://Resources/::1705798239
+::res://Resources/::1705804019
 afk_bomb.png::CompressedTexture2D::4136271510858067649::1705769307::1705769307::1::::<><>::
 bomb.png::CompressedTexture2D::1617879331975900846::1705725364::1705725368::1::::<><>::
 bomb_singular.png::CompressedTexture2D::5228490431129188483::1705740921::1705740921::1::::<><>::
@@ -50,6 +51,7 @@ empty_feet.png::CompressedTexture2D::3177084135435746717::1705737176::1705737176
 escape.png::CompressedTexture2D::4220497760092177104::1705732125::1705732125::1::::<><>::
 explosion.png::CompressedTexture2D::3599987477302444221::1705745120::1705745120::1::::<><>::
 filled_feet.png::CompressedTexture2D::7290970968078448606::1705737176::1705737176::1::::<><>::
+guide2.png::CompressedTexture2D::7602887303284044225::1705804019::1705804019::1::::<><>::
 guide_bomb.png::CompressedTexture2D::6898480038253887378::1705798239::1705798239::1::::<><>::
 gunpowder.png::CompressedTexture2D::8399142084574945607::1705797306::1705797306::1::::<><>::
 loop.png::CompressedTexture2D::1997910293532699019::1705757452::1705757452::1::::<><>::

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d425uo65vp3h"]
+[gd_scene load_steps=9 format=3 uid="uid://d425uo65vp3h"]
 
 [ext_resource type="Texture2D" uid="uid://cbra0n4n7voc4" path="res://Resources/quacker.png" id="1_3ftgk"]
 [ext_resource type="Script" path="res://Objects/HUD.gd" id="1_elrx7"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cgqyqdm1x5t2b" path="res://Resources/bomb_singular.png" id="4_1dfdp"]
 [ext_resource type="Texture2D" uid="uid://drwuv4kt752h4" path="res://Resources/gunpowder.png" id="5_yjsl0"]
 [ext_resource type="Texture2D" uid="uid://0mfslx87cshm" path="res://Resources/clock.png" id="6_h5o6r"]
+[ext_resource type="Texture2D" uid="uid://dgk5pchgitamr" path="res://Resources/guide2.png" id="7_jd5qj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kcj1f"]
 font_size = 48
@@ -128,8 +129,14 @@ your range.
 
 2. Explosions go through walls.
 
-3. Things explode."
+3. Things explode.
+
+"
 fit_content = true
+
+[node name="TextureRect" type="TextureRect" parent="Info"]
+layout_mode = 2
+texture = ExtResource("7_jd5qj")
 
 [node name="ToMainMenu" type="Button" parent="."]
 anchors_preset = 2
